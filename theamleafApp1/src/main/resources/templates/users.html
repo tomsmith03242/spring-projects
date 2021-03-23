@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>hello User!</title>
+</head>
+<body>
+Hello User! welcome to TheameleafApp1
+
+<table class="table table-bordered">
+		<thead class="bg-info text-dark">
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Username</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="user:${usersList}">
+				<td th:text ="${user.id}" ></td>
+				<td th:text ="${user.firstname}"></td>
+				<td th:text ="${user.username}"></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
